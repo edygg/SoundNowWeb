@@ -1,0 +1,45 @@
+body {
+
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+.upper-top{
+  margin-top:-64px;
+
+}
+.screen-2{
+  background-image: url('images/imagen2.jpg');
+  background-size: cover;
+   min-height:100vh;
+  width: 100%;
+  background-repeat: no-repeat;
+   -webkit-filter: opacity(.85);
+  filter: opacity(.85);
+  
+}
+
+.screen-size {
+  background-image: url('images/imageng.jpg');
+  background-size: cover;
+  min-height:100vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  -webkit-filter: opacity(.85);
+  filter: opacity(.85);
+ }
+
+.layer {
+   background-color:rgba(0,0,0,0.5);
+    background-size: cover;
+  min-height:100vh;
+  width: 100%;
+}
+
+.remove-color{
+  background-color: rgba(255,255,255,0.0);
+
+}
+
