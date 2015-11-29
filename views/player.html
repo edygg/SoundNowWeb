@@ -1,0 +1,147 @@
+<!doctype html>
+
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/css/materialize.min.css">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/stylesheets/style2.css">  
+  </head>
+  
+  <body>
+    
+    <nav class=" black">
+      <ul id="slide-out" class="side-nav fixed  blue-grey darken-4">
+        
+        <li><img class="responsive-img" src="images/SoundNow-logo-letras-blanca.png" height="50" width="150"></li>
+        <li>
+         <a href="#!" style="color:#FFFFFF;"><i class="small material-icons">music_note</i>Cancion 1</a>
+        </li>
+        <li class="divider blue-grey darken-2"></li>
+        <li><a href="#!" style="color:#FFFFFF;"><i class="small material-icons">music_note</i>cancion 2</a></li>
+        <li class="divider blue-grey darken-2"></li>
+        <li><a href="#!" style="color:#FFFFFF;"><i class="small material-icons">music_note</i>cancion 3</a></li>
+        <li class="divider blue-grey darken-2"></li>
+      </ul>
+      <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+    </nav>
+<div class="site upper-top">
+  <main>
+    <button id="open-file"><span class="material-icons">folder open</span></button>
+    <div class="box title">
+      
+    </div>
+    <div class="box">
+      <input type="file" id="file-open">
+      <audio autoplay controls></audio>
+    </div>
+    <div class="box song-meta">
+      <figure>
+        <img id="cover" style="opacity: 0.7;" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Song Cover">
+      </figure>
+      <span id="song"></span>
+      <span id="artist"></span>
+    </div>
+  </main>
+   <footer>
+<div class="spectrum">
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+</div>
+     <div class="controls">
+       <button id="play-pause-button"><span class="material-icons">play_arrow</span></button>
+       <div class="progress">
+         <div id="progress-bar"></div>
+       </div>
+     </div>
+ </footer>
+</div>
+
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="800">
+			  <defs>
+			    <filter id="goo">
+			      <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+			      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+			      <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
+			    </filter>
+			    <filter id="goo-no-comp">
+			      <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+			      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 20 -9" result="goo" />
+			    </filter>
+			    <filter id="goo-drops">
+			      <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur" />
+			      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+			    </filter>
+			  </defs>
+			</svg>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/js/materialize.min.js"></script>
+    <script src="/javascripts/id3.min.js"></script>
+    <script src="/javascripts/site.js"></script>
+  </body>
+</html>

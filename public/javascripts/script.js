@@ -1,8 +1,3 @@
-$(document).ready(function(){
-  $('.parallax').parallax();
-  $('.button-collapse').sideNav();
-});
-
 var audio = $('audio')[0],
     visualWidth = 318,
     visualHeight = 200,
