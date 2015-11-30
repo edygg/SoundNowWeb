@@ -31,20 +31,20 @@ var MusicVisuals = {
   call: null,
   start: function() {
     analyser.getByteFrequencyData(frequencyData);
-    
+
     var scales = [], fd = [];
-    
+
     var fdMin = Math.min.apply(Math,frequencyData),
         fdMax = Math.max.apply(Math,frequencyData);
-    
+
     for (var increment = 0; increment < bufferLength; increment++) {
       var y = ScaleBar.get(fdMin, fdMax, frequencyData[increment]);
 
       fd.push(frequencyData[increment]);
-      
+
       $(".spectrum .bar:nth-child("+increment+")").css('transform', 'translateY(' + Math.abs(visualHeight - y) + 'px)');
     }
-    
+
     /*var sc = scales.reduce(function(pv, cv) { return pv + cv; }, 0) / scales.length;
     ScaleBar.sum = fd.reduce(function(pv, cv) { return pv + cv; }, 0) / fd.length;
     sc *= 1.5;*/
@@ -65,9 +65,9 @@ $('#file-open').on('change', function(e) {
   var url = URL.createObjectURL(file);
   audio.src = url;
   $('.box.title').hide();
-  
+
   ID3.clearAll();
-  
+
   ID3.loadTags(url, function() {
     var tags = ID3.getAllTags(url);
     document.querySelector('#artist').innerHTML = tags.artist === undefined ? fileInfo.artist : tags.artist;
@@ -98,7 +98,7 @@ $('#file-open').on('change', function(e) {
       dataReader: FileAPIReader(file),
       tags: ['artist', 'album', 'title', 'picture']
   });
-  
+
   audio.play();
 });
 
