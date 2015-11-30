@@ -93,7 +93,7 @@ $(document).ready(function(){
   $('.button-collapse').sideNav();
   // constants
   var API_BASE_URL = "http://159.203.119.100:3000/api";
-  var SOUNDNOW_BASE_URL = "http://node-js-143658.nitrousapp.com:3000";
+  var SOUNDNOW_BASE_URL = "http://159.203.119.100";
 
   var $shareButton = $('#share-button');
 
@@ -129,7 +129,7 @@ $(document).ready(function(){
     audio.crossOrigin = "anonymous";
     audio.src = url;
 
-    var facebookShare = "https://www.facebook.com/dialog/share?app_id=171464363206426&display=popup&href=" + SOUNDNOW_BASE_URL + "/player?song=" + url + "&redirect_uri=http://node-js-143658.nitrousapp.com:3000/player"
+    var facebookShare = "https://www.facebook.com/dialog/share?app_id=171464363206426&display=popup&href=" + SOUNDNOW_BASE_URL + "/player?song=" + url + "&redirect_uri=" + SOUNDNOW_BASE_URL + "/player"
     $('.box.title').hide();
     $shareButton.attr("href", facebookShare);
     $shareButton.show();
@@ -197,7 +197,7 @@ $(document).ready(function(){
 
      return false;
   });
-  
+
   $('#open-file').on('click', function() {
     $('#file-open').click();
   });
